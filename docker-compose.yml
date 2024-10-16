@@ -1,0 +1,19 @@
+name: simple
+
+services:
+  app:
+   image: isro25/simple-isro
+   build: ./app
+   ports:
+     - "5000:3000"
+   volumes:
+     - vol-simple:/app/public/images/
+  # web-2:
+  #  image: httpd
+  #  ports:
+  #    - "8011:80"
+  #  volumes:
+  #    - "vol-web:/usr/local/apache2/htdocs"
+
+volumes:
+  vol-simple:
